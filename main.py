@@ -1,29 +1,17 @@
-print("Merhaba")
-print("Python temllerini öğreniyorum.")
+daily_sales = [12500, 14100, 9800, 16200, 15300, 8700, 17500]
 
-print(type(10))
-print(type(10.5))
-print(type("Merhaba"))
-print(type(True))
+total_sales = sum(daily_sales)
+average_sales = total_sales / len(daily_sales)
+highest_sales = max(daily_sales)
+lowest_sales = min(daily_sales)
 
-name = input("Adınız: ")
-weekly_hours = float(input("Haftalık çalışma süreniz: "))
-completed_lessons = int(input("Tamamlanan ders sayısı: "))
+print(f"Toplam satış: {total_sales}")
+print(f"Ortalama satış: {average_sales}")
+print(f"En yüksek satış: {highest_sales}")
+print(f"En düşük satış: {lowest_sales}")
 
-monthly_hours = weekly_hours * 4
-
-print(f"Öğrenci: {name}")
-print(f"Haftalık çalışma: {weekly_hours} saat")
-print(f"Aylık tahmini çalışma: {monthly_hours} saat")
-print(f"Tamamlanan ders: {completed_lessons}")
-
-monthly_spending = 6500
-
-if monthly_spending >= 10000:
-    customer_segment = "High Value"
-elif monthly_spending >= 5000:
-    customer_segment = "Medium Value"
-else:
-    customer_segment = "Low Value"
-
-print(customer_segment)
+for sale in daily_sales:
+    if sale > average_sales:
+        print(f"{sale} ortalamanın üzerinde.")
+    else:
+        print(f"{sale} ortalamanın altında veya eşit.")
