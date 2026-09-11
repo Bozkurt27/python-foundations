@@ -16,3 +16,14 @@ print(f"Öğrenci: {name}")
 print(f"Haftalık çalışma: {weekly_hours} saat")
 print(f"Aylık tahmini çalışma: {monthly_hours} saat")
 print(f"Tamamlanan ders: {completed_lessons}")
+
+monthly_spending = 6500
+
+if monthly_spending >= 10000:
+    customer_segment = "High Value"
+elif monthly_spending >= 5000:
+    customer_segment = "Medium Value"
+else:
+    customer_segment = "Low Value"
+
+print(customer_segment)
