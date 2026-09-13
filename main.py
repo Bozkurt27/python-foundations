@@ -15,3 +15,33 @@ for sale in daily_sales:
         print(f"{sale} ortalamanın üzerinde.")
     else:
         print(f"{sale} ortalamanın altında veya eşit.")
+
+
+liste = [36.1, 38.3]  # mutable , indekslenir
+tuple = (36.1, 38.3)  # immutable , indekslenir
+candidate_a = {"Python", "SQL", "Git", "Power BI"}  # indekslenmez, mutable, tekrar eden elemanları göstermez.
+student = {
+    "name": "Şamil",
+    "age": 25,
+    "career": "Data Scientist",
+    "weekly_hours": 10.5
+} # mutable, indekslenir, key-value pair
+
+# unpacking
+model_result = ("Random Forest", 0.91)
+
+model_name, accuracy = model_result
+
+print(model_name)
+print(accuracy)
+
+
+candidate_a = {"Python", "SQL", "Git", "Power BI"}
+candidate_b = {"Python", "SQL", "R", "Machine Learning"}
+common_skills = candidate_a & candidate_b  # kesişim
+all_skills = candidate_a | candidate_b  # birleşim
+only_a = candidate_a - candidate_b  # fark
+
+print(common_skills)
+print(all_skills)
+print(only_a)
