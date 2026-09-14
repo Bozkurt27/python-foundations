@@ -1,39 +1,9 @@
-from pathlib import Path
+import analysis
 
-data_folder = Path("data")
-print(data_folder)
-print(type(data_folder))
+sales = [1200, 1500, 1800, 2000]
 
-file_path = Path("data") / "sales.txt"
+total = analysis.calculate_total(sales)
+average = analysis.calculate_average(sales)
 
-print(file_path)
-
-
-current_folder = Path.cwd()
-print(current_folder)
-
-
-file = open("data/study_notes.txt", "r", encoding = "utf-8")
-content = file.read()
-print(content)
-file.close()
-
-
-
-with open("data/study_notes.txt", "r", encoding = "utf-8") as file:
-    for line in file:
-        print(line.strip())
-
-output_path = Path("data") / "result.txt"
-with open(output_path, "w", encoding = "utf-8") as file:
-    file.write("İlk dosyam")
-
-with open(output_path, "a", encoding = "utf-8") as file:
-    file.write("\nikinci satır")
-
-
-file_path = Path("data") / "study_notes.txt"
-print(file_path.exists())
-
-
-    
+print(f"Toplam: {total}")
+print(f"Ortalama: {average}")
