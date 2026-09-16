@@ -1,9 +1,15 @@
-import analysis
+from customer import Customer
 
-sales = [1200, 1500, 1800, 2000]
+def main():
+    # Create a list of customers
+    customers = [
+        Customer("Alice", "New York", 12000),
+        Customer("Bob", "Los Angeles", 7000),
+        Customer("Charlie", "Chicago", 3000),
+    ]
 
-total = analysis.calculate_total(sales)
-average = analysis.calculate_average(sales)
+    # Print the summary of each customer
+    for customer in customers:
+        print(customer.summary())
 
-print(f"Toplam: {total}")
-print(f"Ortalama: {average}")
+main()
